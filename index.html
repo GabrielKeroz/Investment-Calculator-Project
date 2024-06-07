@@ -13,7 +13,7 @@
       <h1 class="text-xl font-bold px-6">Calculadora de Investimentos</h1>
 
       <form id="investment-form" class="w-full">
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="initial-amount" class="font-bold text-gray-700"
             >Investimento inicial</label
           >
@@ -31,11 +31,12 @@
               placeholder="0.00"
               required
               id="initial-amount"
+              name="initial-amount"
             />
           </div>
         </div>
 
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="additional-contribution" class="font-bold text-gray-700"
             >Aportes adicionais</label
           >
@@ -51,11 +52,12 @@
               class="w-full rounded-r-lg px-2"
               placeholder="0.00"
               id="additional-contribution"
+              name="additional-contribution"
             />
           </div>
         </div>
 
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="time-amount" class="font-bold text-gray-700">Prazo</label>
           <div class="flex">
             <input
@@ -64,6 +66,7 @@
               placeholder="0"
               required
               id="time-amount"
+              name="time-amount"
             />
             <select
               id="time-amount-period"
@@ -75,7 +78,7 @@
           </div>
         </div>
 
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="return-rate" class="font-bold text-gray-700"
             >Rentablidade</label
           >
@@ -92,6 +95,7 @@
               placeholder="0"
               required
               id="return-rate"
+              name="return-rate"
             />
             <select
               id="evaluation-period"
@@ -103,7 +107,7 @@
           </div>
         </div>
 
-        <div class="flex w-full flex-col px-6 my-2">
+        <div class="flex w-full flex-col px-6 my-2 h-[4.25rem]">
           <label for="tax-rate" class="font-bold text-gray-700"
             >Impostos sobre lucro</label
           >
@@ -120,6 +124,7 @@
               placeholder="0"
               required
               id="tax-rate"
+              name="tax-rate"
             />
           </div>
         </div>
@@ -132,7 +137,9 @@
         >
           Calcular
         </button>
-        <button class="w-1/2 rounded-lg hover:bg-emerald-500">Limpar</button>
+        <button id="clear-form" class="w-1/2 rounded-lg hover:bg-emerald-500">
+          Limpar
+        </button>
       </div>
     </aside>
     <main>
