@@ -18,8 +18,10 @@ export const createTable = (columnsArray, dataArray, tableID) => {
     throw new Error("ID informado não corresponde à nenhum elemento table");
   }
 
-  createTableHeader(tableElement, columnsArray);
-  createTableBody(tableElement, dataArray, columnsArray);
+  if (!tableElement.querySelector("tr")) {
+    createTableHeader(tableElement, columnsArray);
+    createTableBody(tableElement, dataArray, columnsArray);
+  }
 };
 
 function createTableHeader(tableReference, columnsArray) {
